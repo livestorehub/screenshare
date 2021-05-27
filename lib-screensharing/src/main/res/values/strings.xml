@@ -1,0 +1,4 @@
+<resources>
+    <string name="agora_app_id" translatable="false">fa8b0d75635048129404d1ccddae9e3c</string>
+    <string name="lowversiontip">The system version is too low to use this feature; please use Android 5.0 System.</string>
+</resources>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="io.agora.rtc.ss" >
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="30" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <application
+        android:name="io.agora.rtc.MyApplication"
+        android:requestLegacyExternalStorage="true" >
+        <activity
+            android:name="io.agora.rtc.screenshare.AgentListActivity"
+            android:theme="@style/theme2" />
+        <activity
+            android:name="io.agora.rtc.ss.impl.ScreenCapture$ScreenCaptureAssistantActivity"
+            android:process=":screensharingsvc"
+            android:screenOrientation="fullUser"
+            android:theme="@android:style/Theme.Translucent" />
+
+        <service
+            android:name="io.agora.rtc.ss.impl.ScreenSharingService"
+            android:foregroundServiceType="mediaProjection"
+            android:process=":screensharingsvc" >
+            <intent-filter>
+                <action android:name="android.intent.action.screenshare" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_share" />
+        <!--
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/channel_id" />
+        -->
+        <service
+            android:name="io.agora.rtc.screenshare.utils.firebase.MyFirebaseMessagingService"
+            android:exported="false" >
+            <intent-filter android:priority="100" >
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name="io.agora.rtc.ss.HeadsUpNotificationActionReceiver" />
+    </application>
+
+</manifest>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+                                                       
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" android:tag="layout/layout_list_select_0" xmlns:tools="http://schemas.android.com/tools">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:id="@+id/llSearch"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Agent List"
+                android:textSize="20sp"
+                android:layout_weight="1"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/colorBlack"
+                />
+
+            <ImageView
+                android:id="@+id/ivClose"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:src="@drawable/ic_close"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:id="@+id/llView"
+            android:layout_marginTop="10dp"
+            android:background="@color/warmGrey"
+            android:orientation="horizontal" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_marginTop="10dp"
+            android:id="@+id/rvAgentList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+         

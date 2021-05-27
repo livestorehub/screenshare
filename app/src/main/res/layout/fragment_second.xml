@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:context=".SecondFragment">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btInsurance"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/background_red"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Insurance"
+                    android:textAllCaps="false"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btFinance"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/background_blue"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Financial Services"
+                    android:layout_weight="1"
+                    android:textAllCaps="false"
+                    android:textAlignment="center"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_medium"
+                    android:text="Please fill out the details below"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/roboto_light"
+                    android:text="If you have any doubts, you can share your screen with our customer care representatives by clicking on the button below"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnShare1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Share Screen"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/background_red"
+                    android:textColor="@color/white"
+                    />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnStop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Stop Screen Share"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:visibility="gone"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/background_red"
+                    android:textColor="@color/white"
+                    />
+
+                <!--<com.livehubstore.shas.CustomButton
+                    android:id="@+id/btnShare"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Share Screen"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/background_red"
+                    android:textColor="@color/white"
+                    />-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:layout_marginTop="20dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:background="@drawable/background_border"
+                        android:gravity="center">
+                        <AutoCompleteTextView
+                            android:id="@+id/etPFName"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:textSize="16sp"
+                            android:focusable="true"
+                            android:background="@android:color/transparent"
+                            android:importantForAutofill="no"
+                            android:inputType="text"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/text"
+                            android:fontFamily="@font/roboto"
+                            android:textColorHint="@color/text_hint"
+                            android:hint="Name"
+                            />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_border"
+                        android:gravity="center">
+                        <AutoCompleteTextView
+                            android:id="@+id/etEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:textSize="16sp"
+                            android:background="@android:color/transparent"
+                            android:importantForAutofill="no"
+                            android:inputType="textEmailAddress"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/text"
+                            android:fontFamily="@font/roboto"
+                            android:textColorHint="@color/text_hint"
+                            android:hint="Email"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_border"
+                        android:gravity="center">
+                        <AutoCompleteTextView
+                            android:id="@+id/etPhone"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:textSize="16sp"
+                            android:background="@android:color/transparent"
+                            android:importantForAutofill="no"
+                            android:inputType="number"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/text"
+                            android:fontFamily="@font/roboto"
+                            android:textColorHint="@color/text_hint"
+                            android:hint="Phone"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_border"
+                        android:gravity="center">
+                        <AutoCompleteTextView
+                            android:id="@+id/etAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingTop="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:gravity="start"
+                            android:textSize="16sp"
+                            android:background="@android:color/transparent"
+                            android:importantForAutofill="no"
+                            android:inputType="textMultiLine"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/text"
+                            android:fontFamily="@font/roboto"
+                            android:textColorHint="@color/text_hint"
+                            android:hint="Address"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_border"
+                        android:gravity="center">
+                        <androidx.appcompat.widget.AppCompatEditText
+                            android:id="@+id/etType"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:textSize="16sp"
+                            android:focusable="false"
+                            android:clickable="false"
+                            android:background="@android:color/transparent"
+                            android:importantForAutofill="no"
+                            android:inputType="text"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/text"
+                            android:fontFamily="@font/roboto"
+                            android:textColorHint="@color/text_hint"
+                            android:hint="Select Type of Insurance"
+                            android:layout_weight="1" />
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/ic_up_down"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/background_border"
+                        android:gravity="center">
+                        <AutoCompleteTextView
+                            android:id="@+id/etPeriod"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingTop="10dp"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:gravity="start"
+                            android:textSize="16sp"
+                            android:background="@android:color/transparent"
+                            android:importantForAutofill="no"
+                            android:inputType="number"
+                            android:layout_marginLeft="10dp"
+                            android:textColor="@color/text"
+                            android:fontFamily="@font/roboto"
+                            android:textColorHint="@color/text_hint"
+                            android:hint="Insurance Period"
+                            />
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btSubmit"
+                        android:layout_width="200dp"
+                        android:layout_height="50dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="Submit"
+                        android:layout_gravity="center"
+                        android:layout_marginBottom="20dp"
+                        android:textAllCaps="false"
+                        android:background="@drawable/background_red"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="30dp"
+                        android:textSize="18sp"
+                        android:gravity="start|center"
+                        android:textAlignment="center" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

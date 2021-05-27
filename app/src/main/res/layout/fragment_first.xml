@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".FirstFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <ImageView
+                android:id="@+id/iv"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/logo"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lion's Bank"
+                android:textSize="20sp"
+                android:textColor="@color/btnColor"
+                android:fontFamily="@font/roboto_bold"
+                android:layout_gravity="center_vertical"
+                />
+        </LinearLayout>
+
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="50dp"
+           android:gravity="center">
+           <androidx.appcompat.widget.AppCompatButton
+               android:id="@+id/btInsurance"
+               android:layout_width="match_parent"
+               android:layout_height="100dp"
+               android:layout_marginLeft="10dp"
+               android:layout_marginRight="10dp"
+               android:background="@drawable/background_blue"
+               android:fontFamily="@font/roboto_medium"
+               android:gravity="center"
+               android:text="Insurance"
+               android:layout_weight="1"
+               android:textAlignment="center"
+               android:textColor="@color/white"
+               android:textSize="18sp" />
+
+           <androidx.appcompat.widget.AppCompatButton
+               android:id="@+id/btFinance"
+               android:layout_width="match_parent"
+               android:layout_height="100dp"
+               android:layout_marginLeft="10dp"
+               android:layout_marginRight="10dp"
+               android:background="@drawable/background_blue"
+               android:fontFamily="@font/roboto_medium"
+               android:gravity="center"
+               android:text="Financial\nServices"
+               android:textAlignment="center"
+               android:layout_weight="1"
+               android:textColor="@color/white"
+               android:textSize="18sp" />
+       </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

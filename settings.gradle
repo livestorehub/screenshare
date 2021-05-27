@@ -1,0 +1,4 @@
+rootProject.name = "LshSSCustomer"
+include ':app'
+include ':shas'
+include ':lib-screensharing'

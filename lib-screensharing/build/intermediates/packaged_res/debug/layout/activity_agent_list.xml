@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:context="io.agora.rtc.screenshare.AgentListActivity">
+
+    <RelativeLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="20dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_back"
+            android:onClick="onBack"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Agent List"
+            android:textSize="18sp"
+            android:layout_toEndOf="@+id/ivBack"
+            android:textColor="@color/colorBlack"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:fontFamily="@font/roboto"
+            />
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+       <LinearLayout
+           android:id="@+id/llProgress"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_centerHorizontal="true"
+           android:layout_marginTop="50dp"
+           android:padding="13dp">
+           <ProgressBar
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"/>
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:text="Please wait while agent list is loading"
+               android:layout_marginLeft="10dp"
+               android:gravity="center"
+               android:textAppearance="?android:textAppearanceMedium"
+               android:layout_gravity="center_vertical"
+               android:id="@+id/loading_msg"
+               android:fontFamily="@font/roboto"
+               android:layout_height="wrap_content" />
+       </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:visibility="gone"
+            android:layout_marginTop="30dp"
+            android:id="@+id/rvAgentList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvNoData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No agents are available at this movement"
+            android:layout_marginTop="50dp"
+            android:textSize="18sp"
+            android:visibility="gone"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/tomato"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:fontFamily="@font/roboto"
+            />
+
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,113 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    xmlns:tools="http://schemas.android.com/tools"
+4    package="io.agora.rtc.ss" >
+5
+6    <uses-sdk
+7        android:minSdkVersion="19"
+7-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml
+8        android:targetSdkVersion="30" />
+8-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml
+9
+10    <uses-permission android:name="android.permission.INTERNET" />
+10-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:6:5-67
+10-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:6:22-64
+11    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+11-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:7:5-79
+11-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:7:22-76
+12    <uses-permission
+12-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:8:5-9:40
+13        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+13-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:8:22-78
+14        tools:ignore="ScopedStorage" />
+14-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:9:9-37
+15    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+15-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:10:5-77
+15-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:10:22-74
+16    <uses-permission android:name="android.permission.CAMERA" />
+16-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:11:5-65
+16-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:11:22-62
+17    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+17-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:12:5-80
+17-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:12:22-77
+18    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+18-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:13:5-71
+18-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:13:22-68
+19    <uses-permission android:name="android.permission.BLUETOOTH" />
+19-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:14:5-68
+19-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:14:22-65
+20    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+20-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:15:5-74
+20-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:15:22-71
+21
+22    <application
+22-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:17:5-54:19
+23        android:name="io.agora.rtc.MyApplication"
+23-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:17:18-59
+24        android:requestLegacyExternalStorage="true" >
+24-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:18:9-52
+25        <activity
+25-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:19:9-20:44
+26            android:name="io.agora.rtc.screenshare.AgentListActivity"
+26-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:19:19-76
+27            android:theme="@style/theme2" />
+27-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:20:13-42
+28        <activity
+28-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:22:9-26:64
+29            android:name="io.agora.rtc.ss.impl.ScreenCapture$ScreenCaptureAssistantActivity"
+29-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:23:13-78
+30            android:process=":screensharingsvc"
+30-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:24:13-48
+31            android:screenOrientation="fullUser"
+31-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:25:13-49
+32            android:theme="@android:style/Theme.Translucent" />
+32-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:26:13-61
+33
+34        <service
+34-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:27:9-34:19
+35            android:name="io.agora.rtc.ss.impl.ScreenSharingService"
+35-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:28:13-54
+36            android:foregroundServiceType="mediaProjection"
+36-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:29:13-60
+37            android:process=":screensharingsvc" >
+37-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:30:13-48
+38            <intent-filter>
+38-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:31:13-33:29
+39                <action android:name="android.intent.action.screenshare" />
+39-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:32:17-76
+39-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:32:25-73
+40            </intent-filter>
+41        </service>
+42
+43        <meta-data
+43-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:36:9-38:53
+44            android:name="com.google.firebase.messaging.default_notification_icon"
+44-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:37:13-83
+45            android:resource="@drawable/ic_share" />
+45-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:38:13-50
+46        <!--
+47        <meta-data
+48            android:name="com.google.firebase.messaging.default_notification_channel_id"
+49            android:value="@string/channel_id" />
+50        -->
+51        <service
+51-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:44:9-50:19
+52            android:name="io.agora.rtc.screenshare.utils.firebase.MyFirebaseMessagingService"
+52-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:45:13-94
+53            android:exported="false" >
+53-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:46:13-37
+54            <intent-filter android:priority="100" >
+54-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:47:13-49:29
+54-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:47:28-50
+55                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+55-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:48:17-78
+55-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:48:25-75
+56            </intent-filter>
+57        </service>
+58
+59        <receiver android:name="io.agora.rtc.ss.HeadsUpNotificationActionReceiver" />
+59-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:52:9-70
+59-->/home/swap/Documents/LshSSCustomer/lib-screensharing/src/main/AndroidManifest.xml:52:19-68
+60    </application>
+61
+62</manifest>

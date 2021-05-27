@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/colorWhite"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <!-- <com.livehubstore.shas.CustomButton
+        android:id="@+id/btnShare"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Screen Share"
+        android:layout_centerInParent="true"
+        />-->
+   <androidx.appcompat.widget.Toolbar
+       android:id="@+id/toolbar"
+       android:layout_marginTop="@dimen/permission_dp_10"
+       android:layout_width="match_parent"
+       android:layout_height="?attr/actionBarSize"
+       android:background="@android:color/transparent"
+       app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+
+     <LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="24dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="20dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_back"
+            android:onClick="onBack"
+            android:clickable="true"
+            android:focusable="true" />
+
+        <ImageView
+            android:id="@+id/iv"
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/logo"/>
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lion's Bank"
+            android:textSize="20sp"
+            android:textColor="@color/btnColor"
+            android:fontFamily="@font/roboto_bold"
+            android:layout_gravity="center_vertical"
+            />
+     </LinearLayout>
+
+   </androidx.appcompat.widget.Toolbar>
+
+   <FrameLayout
+       android:layout_below="@+id/toolbar"
+       android:id="@+id/fl_fragment"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+   </FrameLayout>
+
+</RelativeLayout>
