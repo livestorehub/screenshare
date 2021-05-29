@@ -44,14 +44,14 @@ class Screenshare(
     }
 
     class Builder() {
-        var enterpriseApiKey: String? = null
-        var enterpriseKey: String? = null
-        var enterpriseSecret: String? = null
-        var customerId: String? = null
-        var customerFirstName: String? = null
-        var customerLastName: String? = null
-        var customerEmail: String? = null
-        var customerPhone: String? = null
+        var enterpriseApiKey: String? = ""
+        var enterpriseKey: String? = ""
+        var enterpriseSecret: String? = ""
+        var customerId: String? = ""
+        var customerFirstName: String? = ""
+        var customerLastName: String? = ""
+        var customerEmail: String? = ""
+        var customerPhone: String? = ""
         var context: Activity? = null
         var appContext: Context? = null
         var callBack : ScreenShareCallBack? = null

@@ -5,10 +5,8 @@
 
     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
 
-    <string name="enterpriseApiKey" translatable="false">3173c1435e71e331341bbb3f42eb1420</string>
-    <string name="enterpriseKey" translatable="false">ef256a153432cd0c4ed73bd33a471742</string>
-    <string name="enterpriseSecret" translatable="false">$2y$13$xDwwb2y.gEdXQVtDip2c.uIvc/QapXI/Qi3QJcoy/JpBjZRVkcdce</string>
+    <string name="enterpriseApiKey" translatable="false">Your Enterprise Api Key</string>
+    <string name="enterpriseKey" translatable="false">Your Enterprise Key</string>
+    <string name="enterpriseSecret" translatable="false">Your Enterprise Secret</string>
 
-    <!--<string name="enterpriseKey" translatable="false">ZWYyNTZhMTUzNDMyY2QwYzRlZDczYmQzM2E0NzE3NDI=</string> &lt;!&ndash;Base64 encode&ndash;&gt;
-    <string name="enterpriseSecret" translatable="false">JDJ5JDEzJHhEd3diMnkuZ0VkWFFWdERpcDJjLnVJdmMvUWFwWEkvUWkzUUpjb3kvSnBCalpSVmtjZGNl</string>&lt;!&ndash;Base64 encode&ndash;&gt;-->
 </resources>

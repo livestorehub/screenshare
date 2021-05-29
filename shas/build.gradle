@@ -4,7 +4,7 @@ plugins {
     id 'kotlin-parcelize'
     id 'kotlin-kapt'
     id 'com.google.gms.google-services'
-    id 'com.vanniktech.maven.publish' // NEW
+    id("org.jetbrains.dokka") version "1.4.32"
 }
 
 android {
@@ -45,12 +45,10 @@ android {
 }
 
 dependencies {
-
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.5.0'
     implementation 'androidx.appcompat:appcompat:1.3.0'
-    implementation project(":lib-screensharing")
-
+    implementation 'com.livestorehub.shas:lib-screensharing:1.0.0'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
@@ -59,3 +57,10 @@ dependencies {
 repositories {
     mavenCentral()
 }
+
+ext {
+    PUBLISH_GROUP_ID = 'com.livestorehub.shas'
+    PUBLISH_VERSION = '1.1.0'
+    PUBLISH_ARTIFACT_ID = 'shas'
+}
+apply from: "${rootDir}/scripts/publish-module.gradle"
